@@ -1,3 +1,3 @@
-# Touchpad Navigation for Opera GX
+# Touchpad Navigation Extension for Opera GX
 
-Swipe left & right to navigate between pages.
+Swipe left & right using the touchpad to navigate between pages.
