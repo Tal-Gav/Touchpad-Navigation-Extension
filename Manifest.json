@@ -1,0 +1,15 @@
+{
+  "name": "Touchpad Swipe Navigation",
+  "version": "1.0.0",
+  "description": "navigate between pages using touchpad",
+  "manifest_version": 3,
+  "author": "Tal G",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Touchpad Swipe Navigation"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
