@@ -1,4 +1,3 @@
-console.log("injected");
 let isScrolling = false;
 
 const doScroll = (e) => {
@@ -6,6 +5,7 @@ const doScroll = (e) => {
 
   const deltaX = Math.max(-1, Math.min(1, e.deltaX));
 
+  // Calculate horizontal movement
   if (deltaX === 1) {
     history.forward();
   } else if (deltaX === -1) {
@@ -19,6 +19,5 @@ const doScroll = (e) => {
   }, 1000); // Adjust the delay (in milliseconds) as needed
 };
 
-if (document.addEventListener) {
-  document.addEventListener("wheel", doScroll, { passive: true });
-}
+// Add EventListener for 'wheel' event - scrolling
+document.addEventListener("wheel", doScroll, { passive: true });

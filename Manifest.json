@@ -9,10 +9,10 @@
     "default_title": "Touchpad Swipe Navigation"
   },
   "icons": {
-    "16": "2-drag.png",
-    "32": "2-drag.png",
-    "48": "2-drag.png",
-    "128": "2-drag.png"
+    "16": "assets/2-drag.png",
+    "32": "assets/2-drag.png",
+    "48": "assets/2-drag.png",
+    "128": "assets/2-drag.png"
   },
   "content_scripts": [
     {
@@ -23,7 +23,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["injected.js"],
+      "resources": ["navigation.js"],
       "matches": ["<all_urls>"]
     }
   ]
