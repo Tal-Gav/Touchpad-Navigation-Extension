@@ -1,17 +1,15 @@
-let isScrolling = false;
-const sensitivityThreshold = 4;
+let isScrolling = false; // bool for avoiding multiple scrolls
+const sensitivityThreshold = 4; // responsible for swipe sensitivity
 
 const doScroll = (e) => {
   // Check if scrolling is currently being processed,
   // if true, exit the function to avoid handling multiple scrolls in quick succession
   if (isScrolling) return;
   const deltaX = e.deltaX;
-  console.log(deltaX);
+
   if (deltaX >= sensitivityThreshold) {
-    console.log("swiped");
     history.forward();
   } else if (deltaX <= -sensitivityThreshold) {
-    console.log("swiped");
     history.back();
   }
 
