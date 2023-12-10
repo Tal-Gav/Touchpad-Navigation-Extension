@@ -1,6 +1,6 @@
 {
   "name": "Touchpad Swipe Navigation for Opera GX",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Navigate between pages using touchpad. Make sure to Allow access to search page results.",
   "manifest_version": 3,
   "author": "Tal G",

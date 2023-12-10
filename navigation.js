@@ -1,14 +1,17 @@
 let isScrolling = false;
+const sensitivityThreshold = 4;
 
 const doScroll = (e) => {
+  // Check if scrolling is currently being processed,
+  // if true, exit the function to avoid handling multiple scrolls in quick succession
   if (isScrolling) return;
-
-  const deltaX = Math.max(-1, Math.min(1, e.deltaX));
-
-  // Calculate horizontal movement
-  if (deltaX === 1) {
+  const deltaX = e.deltaX;
+  console.log(deltaX);
+  if (deltaX >= sensitivityThreshold) {
+    console.log("swiped");
     history.forward();
-  } else if (deltaX === -1) {
+  } else if (deltaX <= -sensitivityThreshold) {
+    console.log("swiped");
     history.back();
   }
 
@@ -16,7 +19,7 @@ const doScroll = (e) => {
   isScrolling = true;
   setTimeout(function () {
     isScrolling = false;
-  }, 1000); // Adjust the delay (in milliseconds) as needed
+  }, 1000);
 };
 
 // Add EventListener for 'wheel' event - scrolling
